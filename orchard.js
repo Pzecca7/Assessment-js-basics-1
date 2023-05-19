@@ -94,9 +94,9 @@ console.log(totalAcres)
 // CODE HERE
 
 
-// to calculate the average acres per day we just have to take our totalAcres and divide it by the average acres picked each day added together. For example: FujiAcres[0] + galaAcres[0] + pinkAcres[0] all divided by 3 is the average total for Monday. Add that vlaue to the other 6 other vlaues and you get 21. Another way to think about it is that there are 21 different days in total between the 3 arrays, so each day an average of 3 acres were picked since the total acres was 63.
+// to calculate the average acres per day we just have to take our totalAcres and divide it by the number of days in the week.
 
-averageDailyAcres = totalAcres/(fujiAcres.length + galaAcres.length + pinkAcres.length)
+averageDailyAcres = totalAcres/(fujiAcres.length + galaAcres.length + pinkAcres.length)*3
 
 console.log(averageDailyAcres)
 
@@ -136,7 +136,7 @@ let days = 0
 
 // CODE HERE
 
-// Everytime acresLeft is above zero we run this while loop to see how many more days it will take to pick the remaining 174 acres. Setting acresLeft to acresLeft - acerageDailyAcres means 174-3 each loop and at the same time we increase the days variable by 1. Until acresLeft finally reaches zero, this loop will increase the days by 1 and we get how many days needed to pick the remaing amount.
+// Everytime acresLeft is above zero we run this while loop to see how many more days it will take to pick the remaining 174 acres. Setting acresLeft to acresLeft - acerageDailyAcres means 174-9 each loop and at the same time we increase the days variable by 1. Until acresLeft finally reaches zero, this loop will increase the days by 1 and we get how many days needed to pick the remaing amount.
 
 while (acresLeft > 0){
     acresLeft = acresLeft - averageDailyAcres
